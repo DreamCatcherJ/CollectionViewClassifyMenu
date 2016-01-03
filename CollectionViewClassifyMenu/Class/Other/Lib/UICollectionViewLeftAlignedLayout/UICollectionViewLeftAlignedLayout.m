@@ -44,7 +44,9 @@
 {
     self = [super init];
     if (self) {
+        if ([[UIDevice currentDevice].systemVersion doubleValue]>=9.0) {
             self.sectionHeadersPinToVisibleBounds = YES;
+        }
     }
     return self;
 }
